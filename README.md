@@ -8,6 +8,32 @@ Pythonコードをプロジェクトとしてメンテナンスするための�
 * pipenvをインストール済み
 * VSCodeをエディターとして使用
 
+プロジェクト管理を楽にするツールとしてpipenvを使用しています。
+以下、Pipfileの内容です。
+
+```
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+mypy = "*"
+flake8 = "*"
+black = "*"
+
+[packages]
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
+
+[scripts]
+test = "python -m unittest discover src -v"
+```
+
 導入方法は次の通りです。
 
 まずはクローンして、新しいリポジトリを設定します。
