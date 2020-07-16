@@ -5,7 +5,7 @@ Pythonコードをプロジェクトとしてメンテナンスするための�
 前提環境は次の通りです。
 
 * Python3.8をインストール済み
-* pipenvをインストール済み
+* pipenvをインストール済み(環境変数に`PIPENV_VENV_IN_PROJECT=1`を設定済み)
 * VSCodeをエディターとして使用
 
 プロジェクト管理を楽にするツールとしてpipenvを使用しています。
@@ -46,7 +46,7 @@ git remote add origin [新しいリモートリポジトリのURL]
 ```
 
 次にvscodeの設定をします。以下はmacの例です。
-windowsの場合は`"python.pythonPath"`に、`".venv\\Scripts\\python.exe"`を設定します。
+windowsの場合は`"python.pythonPath"`に`".venv\\Scripts\\python.exe"`を設定します。
 `.vscode/settings.json`は、チームメンバーでマシンのOSが統一されているならリポジトリに含めた方が楽でしょう。
 
 ```
