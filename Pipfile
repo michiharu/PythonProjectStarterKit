@@ -7,6 +7,7 @@ verify_ssl = true
 mypy = "*"
 flake8 = "*"
 black = "*"
+isort = "*"
 
 [packages]
 
@@ -18,3 +19,4 @@ allow_prereleases = true
 
 [scripts]
 test = "python -m unittest discover src -v"
+isort = "python -m isort -m 3 ."
