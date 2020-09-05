@@ -7,7 +7,7 @@ verify_ssl = true
 mypy = "*"
 flake8 = "*"
 black = "*"
-isort = "*"
+isort = {extras = ["pyproject"], version = "*"}
 
 [packages]
 
@@ -18,5 +18,9 @@ python_version = "3.8"
 allow_prereleases = true
 
 [scripts]
+libs = "python -m pip freeze"
 test = "python -m unittest discover src -v"
-isort = "python -m isort -m 3 ."
+type = "python -m mypy src"
+lint = "python -m flake8 src"
+fmt  = "python -m black src"
+isort = "python -m isort -m 3 src"

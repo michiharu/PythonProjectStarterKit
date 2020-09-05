@@ -45,4 +45,4 @@ nodeLanguageServer/**
 nodeLanguageServer.*/**
 
 # custom
-.vscode/settings.json
+.vscode*
